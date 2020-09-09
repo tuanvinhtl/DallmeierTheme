@@ -1,0 +1,70 @@
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="headbar">Dallmeier</div>
+        <div class="navbar">
+            <div class="tabs">
+                <div class="item">
+                    <div class="logo-c">
+                        <img src="./img/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="item actived"><i class="fas fa-tachometer-alt icon-md"> <span>Dashboard</span></i></div>
+                <div class="item"><i class="fas fa-cogs icon-md"> <span>Settings</span></i></div>
+            </div>
+        </div>
+        <div class="toolbar"><input type="checkbox" id="switch" name="theme"><label for="switch">Toggle</label></div>
+        <div class="main-body">
+            <div class="accordion-c">
+
+            </div>
+            <div class="accordion-c">
+
+            </div>
+            <div class="accordion-c">
+
+            </div>
+            <div class="accordion-c">
+
+            </div>
+            <div class="accordion-c">
+
+            </div>
+            <div class="accordion-c">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var checkbox = document.querySelector('input[name=theme]');
+        checkbox.addEventListener('change', function () {
+            if (this.checked) {
+                trans()
+                document.documentElement.setAttribute('data-theme', 'light')
+            } else {
+                trans()
+                document.documentElement.setAttribute('data-theme', 'dark')
+            }
+        })
+
+        let trans = () => {
+            document.documentElement.classList.add('transition');
+            window.setTimeout(() => {
+                document.documentElement.classList.remove('transition')
+            }, 1000)
+        }
+
+    </script>
+</body>
+
+</html>
